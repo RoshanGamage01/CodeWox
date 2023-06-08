@@ -1,0 +1,374 @@
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --purple-dark: #C10339;
+    --purple-light: #E30047;
+    --dark-gray: #373230;
+}
+
+body{
+    background-color: #ececec !important;
+}
+
+.header-top{
+    background-color: var(--purple-dark);
+    padding: 5px 50px;
+    color: white;
+}
+
+.header-top-r{
+    float: right;
+}
+
+.header-top-r span{
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    margin: 0 4px;
+}
+
+.header-top-r span img{
+    width: 10px;
+}
+
+.header-top-main{
+    background-color: var(--purple-light);
+    padding: 5px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 20%;
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.search-bar input{
+    background: white;
+    border: none;
+    font-size: 14px;
+    color: #909090;
+    border-right: none;
+    height: 37px;
+    padding: 0 10px 0 32px;
+    outline: none;
+    text-overflow: ellipsis;
+    border-radius: 2px 0px 0px 2px;   
+    margin: 0px !important;
+    width: 40%;
+}
+
+.search-bar button{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--dark-gray);
+    color: #fff;
+    transition: all .2s ease-out;
+    height: 37px;
+    padding: 0 30px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    line-height: 25px;
+    font-size: 14px;
+    border-radius: 0 3px 3px 0 !important;
+}
+
+.search-bar button svg{
+    fill: white;
+}
+
+.cart-and-profile{
+    display: flex;
+    gap: 30px;
+}
+
+.cart-and-profile .cart, .signin{
+    color: white;
+    fill: white;
+    cursor: pointer;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    /* height: 100vh; */
+    margin: 10px 50px;
+}
+
+.main .side-bar{
+    background-color: white;
+    box-shadow: 0 0 5px -2px var(--dark-gray);
+    grid-row-start: 1;
+    border-radius: 8px;
+    grid-row: span 3;
+    padding: 15px;
+    text-align: left;
+    height: fit-content;
+}
+
+.main ul{
+    list-style-type: none;
+}
+
+.main ul div{
+    margin-bottom: 20px;
+}
+
+.main ul li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+    font-size: 12px;
+}
+
+.main ul li a{
+    text-decoration: underline !important;
+    color: rgb(77, 116, 193) !important;
+}
+
+.main ul .category-image{
+    margin: 0;
+    overflow: hidden;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+}
+
+.main .slider-section{
+    grid-column: span 4;
+    /* grid-row: span 2; */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#myCarousel{
+    background-color: red;
+    width: 100% !important;
+    height: 400px !important;
+}
+
+.carousel-inner{
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden;
+    box-shadow: 0 0 5px -2px var(--dark-gray);
+}
+
+.carousel-inner img{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.carousel-indicators{
+    width: 100%;
+    background-color: white;
+    margin: 0 !important;
+    justify-content: space-between !important;
+}
+
+
+#carouselIndicator{
+    flex: 1;
+    background-color: white;
+    border: 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+#myCarousel a .carousel-arrows{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-size: 50%;
+    background-color: rgb(255, 255, 255);
+    background-blend-mode: difference;
+}
+
+.main .delivery-location{
+    background-color: white;
+    /* grid-row: span 2; */
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main .delivery-location img{
+    width: 80%;
+}
+
+.main .delivery-location span{
+    display: inline-block;
+    width: 100%;
+    margin: 20px 0;
+    color: gray;
+    text-align: center;
+}
+
+.main .delivery-location .delivery-text{
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.main .delivery-location input{
+    width: 100%;
+    padding: 5px 10px;
+}
+
+.main .delivery-location .delivery-btns{
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.main .delivery-location .delivery-btns .submit-btn{
+    background-color: var(--dark-gray);
+    color: white;
+    border: none;
+    padding: 5px 30px;
+}
+
+.main .delivery-location .delivery-btns .next-btn{
+    border: none;
+    flex: 1;
+}
+
+.main .product-section{
+    margin-top: 20px;
+    grid-column: span 5;
+}
+
+.main .product-section h4{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.main .product-section .product-list{
+    width: 100%;
+    height: 350px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.product{
+    height: 100%;
+    width: 220px;
+    padding: 5px;
+}
+
+.product .product-image{
+    width: 100%;
+    height: 65%;
+    background-color: lightcoral;
+    overflow: hidden;
+}
+
+.product .product-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.product .product-name{
+    max-width: 192px;
+    max-height: 36px;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+    line-height: 18px;
+    -webkit-box-orient: vertical;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.product .product-rating::before{
+    content: "\2605\2605\2605\2605\2605";
+    color: #FFC315;
+}
+
+.product .product-price{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.product .product-price .old-price{
+    color: rgba(128, 128, 128, 0.817);
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
+.product .product-price .new-price{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.product .product-price .discount-label{
+    font-size: 13px;
+    padding: 5px;
+    border: 1px solid gray;
+    color: gray;
+    border-radius: 2px 5px;
+    margin-left: 10px;
+}
+
+.arrow{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 5px -2px var(--dark-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.arr-left{
+    margin-left: 10px;
+    rotate: -90deg;
+}
+
+.arr-right{
+    right: 60px;
+    rotate: 90deg;
+}
+
+footer{
+    width: 100%;
+    background-color: var(--dark-gray);
+    color: white;
+    padding: 10px 50px;
+}
